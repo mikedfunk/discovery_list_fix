@@ -24,8 +24,8 @@
 			// your JavaScript code goes here!
 			
 			$('#sliderTitle option').each(function(index, value){
-				$(this).val($(this).val.replace('Song - ', ''));
-				$(this).val($(this).val.replace('Lyrics - ', ''));
+				$(this).val($(this).val().replace('Song - ', ''));
+				$(this).val($(this).val().replace('Lyrics - ', ''));
 			});
 
 			$("#sliderTitle").html($("#sliderTitle option").sort(function (a, b) {
