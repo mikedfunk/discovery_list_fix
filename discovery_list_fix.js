@@ -22,15 +22,15 @@
 	function initMyBookmarklet() {
 		(window.myBookmarklet = function() {
 			// your JavaScript code goes here!
-
-			$("#sliderTitle").html($("#sliderTitle option").sort(function (a, b) {
-			    return a.text == b.text ? 0 : a.text < b.text ? -1 : 1
-			}));
-
+			
 			$('#sliderTitle option').each(function(index, value){
 				$(this).val($(this).val.replace('Song - ', ''));
 				$(this).val($(this).val.replace('Lyrics - ', ''));
 			});
+
+			$("#sliderTitle").html($("#sliderTitle option").sort(function (a, b) {
+			    return a.text == b.text ? 0 : a.text < b.text ? -1 : 1
+			}));
 		})();
 	}
 
