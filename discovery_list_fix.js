@@ -23,14 +23,19 @@
 		(window.myBookmarklet = function() {
 			// your JavaScript code goes here!
 			
+			// fix prefixes
 			$('#sliderTitle option').each(function(index, value){
 				$(this).text($(this).text().replace('Song - ', ''));
 				$(this).text($(this).text().replace('Lyrics - ', ''));
 			});
 
+			// sort alphabetically
 			$("#sliderTitle").html($("#sliderTitle option").sort(function (a, b) {
 			    return a.text == b.text ? 0 : a.text < b.text ? -1 : 1
 			}));
+
+			// alert
+			alert('List of panels has been sorted alphabetically.');
 		})();
 	}
 
