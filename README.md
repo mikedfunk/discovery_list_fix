@@ -1,0 +1,1 @@
+Go to [this page](http://pastehtml.com/view/c5l72x6yu.html) and follow instructions
